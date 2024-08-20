@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân loại Email</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <h1>Phân loại Email</h1>
+
+    <form method="POST">
+        <label for="email-content">Nhập nội dung email:</label>
+        <textarea id="email-content" name="email_content" placeholder="Nhập email của bạn tại đây...">{{ email_content if email_content else '' }}</textarea>
+
+        <button type="submit">Phân loại</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        Kết quả: {{ result }}
+    </div>
+    {% endif %}
+
+</body>
+</html>

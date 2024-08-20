@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phân loại Email</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+    <h1>Phân loại Email</h1>
+
+    <form id="email-form">
+        <label for="email-content">Nhập nội dung email:</label>
+        <textarea id="email-content" placeholder="Nhập email của bạn tại đây..."></textarea>
+
+        <button type="button" onclick="classifyEmail()">Phân loại</button>
+    </form>
+
+    <div id="result" class="result" style="display:none;"></div>
+
+    <script src="static/js/app.js"></script>
+</body>
+</html>
